@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>23 修正 commit 過的版本歷史紀錄 Part 5 (rebase 2).markdown—/Users/Zidane/Documents/Learn-Git-in-30-days/docs</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <h1 id="23-commit-part-5">第 23 天：修正 commit 過的版本歷史紀錄 Part 5</h1>
+<p>我們上一篇文章談到的 Rebase 是用來將現有的兩個分支進行「重新指定基礎版本」，執行 Rebase 之後，也會改掉原本分支的起點 (分支點移動了)，所以導致版本線圖發生變化。不過 Rebase 可以做到的能力不只這樣，他還能用來修改特定分支線上任何一個版本的版本資訊。</p>
+<h2 id="_1">準備本日練習用的版本庫</h2>
+<p>我們一樣先用以下指令建立一個練習用的工作目錄與本地儲存庫 (一樣先切換到 <code>C:\</code> 然後複製貼上就會自動建立完成)：</p>
+<div class="codehilite"><pre>mkdir git-rebase-demo
+
+cd git-rebase-demo
+git init
+
+echo 1 &gt; a.txt
+git add .
+git commit -m &quot;Initial commit (a.txt created)&quot;
+
+ping 127.0.0.1 -n 2 &gt;nul
+
+echo 2 &gt; a.txt
+git add .
+git commit -m &quot;Update a.txt to 2&quot;
+
+ping 127.0.0.1 -n 2 &gt;nul
+
+:: 建立並切換到 branch1 分支
+git checkout -b branch1
+
+echo b &gt; b.txt
+git add .
+git commit -m &quot;Add b.txt&quot;
+
+echo c &gt; c.txt
+git add .
+git commit -m &quot;Add c.txt&quot;
+
+echo 333 &gt; c.txt
+git add .
+git commit -m &quot;Update c.txt to 333&quot;
+
+echo d &gt; d.txt
+git add .
+git commit -m &quot;Add d.txt&quot;
+
+ping 127.0.0.1 -n 2 &gt;nul
+
+:: 切換到 master 分支
+git checkout master
+
+echo 3 &gt; a.txt
+git add .
+git commit -m &quot;Update a.txt to 3&quot;
+</pre></div>
+
+
+<p><strong>註</strong>：上述指令中的 <code>ping  127.0.0.1 -n 2 &gt;nul</code> 主要是用到了 <a href="http://blog.miniasp.com/post/2009/06/24/Sleep-command-in-Batch.aspx">如何在批次檔(Batch)中實現 sleep 命令讓任務暫停執行 n 秒</a> 文章中提到的技巧。</p>
+<p>我們用 SourceTree 查看儲存庫的 commit graph (版本線圖) 如下：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1379049/c6609d70-3ae2-11e3-89e5-b011f0ed15e5.png"></p>
+<h2 id="git-rebase">使用 <code>git rebase</code> 命令的注意事項</h2>
+<p>這件事還是必須重申一次！首先，你的「工作目錄」必須是乾淨，工作目錄下的「索引」不能有任何準備要 commit 的檔案 (staged files) 在裡面，否則指令將會無法執行。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1379084/f33a2310-3ae3-11e3-83c3-6dde9af36b4c.png"></p>
+<p>再來，也是最重要的，如果你的分支是從遠端儲存庫下載回來的，請<strong>千萬不要</strong>透過 Rebase 修改版本歷史紀錄，否則你將會無法將修改過後的版本送到遠端儲存庫！</p>
+<h2 id="rebase">Rebase 能做的事</h2>
+<p>上一篇文章講的，你可以將某個分支當成自己目前分支的「基礎版本」。除了這件事以外，你還可以用來修改某個分支中「特定一段」歷程的紀錄，你可以做的事情包括：</p>
+<ol>
+<li>調換 commit 的順序</li>
+<li>修改 commit 的訊息</li>
+<li>插入一個 commit</li>
+<li>編輯一個 commit</li>
+<li>拆解一個 commit</li>
+<li>壓縮一個 commit，且保留訊息紀錄</li>
+<li>壓縮一個 commit，但丟棄版本紀錄</li>
+<li>刪除一個 commit</li>
+</ol>
+<p>這八件事，可以完整看出 Rebase 修正歷史版本紀錄的強大威力，接下來我們就逐一介紹如何好好利用 Rebase 幫我們修訂版本。</p>
+<h2 id="1-commit">1. 調換 commit 的順序</h2>
+<p>首先，我們先切換到 <code>branch1</code> 分支 ( <code>git checkout branch1</code> )</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382124/4bd35d66-3b2a-11e3-82fa-62322f9d68f7.png"></p>
+<p>到 SourceTree 查看版本線圖，然後我們先決定這個分支中想要執行 Rebase 的起點 (不一定要是分支的起始點，任何一版都可以)，決定之後，直接在 SourceTree 複製該版本的<strong>絕對名稱</strong>(也就是以 SHA1 雜湊過的 Git 物件ID)。從下圖你可以看到，我們先在該版本按下滑鼠右鍵，然後再點選 <strong>Copy SHA to Clipboard</strong> 即可將 id 複製到剪貼簿中：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382144/9c617772-3b2a-11e3-9491-bd022904ab6b.png"></p>
+<p>然後我們執行 <code>git rebase 92f937a190e1fca839eed4f51d7f7199b617e3d4 -i</code>
+<strong>注意</strong>: 這裡的 <code>92f937a190e1fca839eed4f51d7f7199b617e3d4</code> 跟你自己建立的可能不一樣，請不要照抄。</p>
+<p>接著會跳出編輯器，並且讓你編輯一系列「指令」，如下圖示：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382203/6bdc8bd6-3b2b-11e3-928f-fc129ffc0e68.png"></p>
+<p>你如果什麼都不改，就是執行這一系列 <code>pick</code> 等動作，這裡必須先讓各位瞭解的是這些指令的格式，與他的順利代表的意義。</p>
+<p>我們先來看第一行，區分成三個欄位，分別以「空白字元」間隔，分別如下：</p>
+<ol>
+<li><code>pick</code> 代表的是「命令」，底下註解的部分有一系列「命令」的名稱與簡寫，你寫 <code>p</code> 與 <code>pick</code> 都是一樣的意思。</li>
+<li><code>d86532d</code> 代表的是要使用的 commit 物件編號(絕對名稱)。</li>
+<li>剩下的文字則是這個版本的紀錄訊息摘要。</li>
+</ol>
+<p>如果你有看過【<strong>第 22 天：修正 commit 過的版本歷史紀錄 Part 4</strong>】這篇文章，你應該會知道執行 Rebase 的時候，會先將我們目前 <code>branch1</code> 分支的最新版本(head)倒帶(rewind)到你這次指定的分支起點(rewinding head)，在這個例子裡，我們指定的分支起點就是 <code>92f937a190e1fca839eed4f51d7f7199b617e3d4</code> 這個節點。</p>
+<p>這時我們用 <code>git log</code> 查看一下目前的版本紀錄，我們指定的那個版本，並不在我們的 Rebase 指令清單中。該指令清單，由上至下分別是「最舊版」到「最新版」的順序，跟我們用 <code>git log</code> 執行的顯示順序剛好相反：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382307/fb276a6c-3b2c-11e3-87ef-bacff67e7656.png"></p>
+<p>我們再重看一次這幾個版本如下：</p>
+<div class="codehilite"><pre>pick d86532d Add b.txt
+pick 22e1885 Add c.txt
+pick bf40b2c Update c.txt to 333
+pick 5027152 Add d.txt
+</pre></div>
+
+
+<p>這裡的 <code>pick</code> 代表的功能是 <code>use commit</code>，也就是我們要用這個版本來 commit 新版本。也就是上一篇文章講到的<strong>重新套用</strong>(replay)這個字，所以這幾個指令，就是讓你在分支「倒帶」之後，重新用這幾個版本套用一次版本變更，而且重新套用的過程會沿用當時版本的變更紀錄。</p>
+<p>現在我們先來嘗試「<strong>調換 commit 的順序</strong>」這個命令。</p>
+<p>若要完成「<strong>調換 commit 的順序</strong>」的任務，你只要很簡單的修改這份文字檔，把版本的前後順序對調即可，例如我們修改成：</p>
+<div class="codehilite"><pre>pick 22e1885 Add c.txt
+pick d86532d Add b.txt
+pick bf40b2c Update c.txt to 333
+pick 5027152 Add d.txt
+</pre></div>
+
+
+<p>然後存檔退出，我們看看指令最後的執行結果為何，你可以發現，我們這兩個版本真的順序對調了：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382455/d491943e-3b2e-11e3-9558-024cd74848a8.png"></p>
+<p>這裡有一點你必須特別注意，那就是從 <code>92f937a190e1fca839eed4f51d7f7199b617e3d4</code> 這個版本開始，所有後續版本的 commit 絕對名稱全部都不一樣了，這代表我們在 Rebase 的過程會重新建立許多新的 commit 物件。那麼舊的物件到哪裡去了呢？真相是，這些以前的版本全部都還在，只是你找不到罷了，全都躺在 Git 物件儲存庫中，只要你知道這些版本(也就是 commit 物件)的絕對名稱，你就可以隨時取出！(請回憶一下 <code>git reflog</code> 命令)</p>
+<p>我們從 SourceTree 裡面看一下版本線圖，感覺上跟上面那張圖好像差很多，但其實只有這兩個版本調換而已，線圖不太一樣的原因是時間序改變了，我想這應該是 SourceTree 的顯示邏輯跟時間序有關，才會讓這線圖變得跟之前差這麼多，初學者可別弄亂了。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382662/5b964dba-3b31-11e3-8ddd-0ca2b4bf36ff.png"></p>
+<h2 id="2-commit">2. 修改 commit 的訊息</h2>
+<p>修改曾經 commit 過的訊息，只要稍加修改 Rebase 的命令即可，我們先看看目前的版本紀錄：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382707/e6e4b582-3b31-11e3-9c02-e366e51ac489.png"></p>
+<p>如果我們打算把下圖標示紅線的版本訊息修改為 <code>Update: c.txt is changed to 333</code> 文字的話，我們先執行跟上個例子相同的指令：</p>
+<div class="codehilite"><pre>git rebase 92f937a190e1fca839eed4f51d7f7199b617e3d4 -i
+</pre></div>
+
+
+<p>然後會開啟文字編輯器，此時的內容應該如下：</p>
+<div class="codehilite"><pre>pick 3654a50 Add c.txt
+pick 0341056 Add b.txt
+pick 6883d87 Update c.txt to 333
+pick 36ed38f Add d.txt
+</pre></div>
+
+
+<p>我們想修改 <code>6883d87</code> 這個版本的訊息，只要把這一行前面的 <code>pick</code> 改成 <code>reword</code> 即可。修改完後的文字如下：</p>
+<div class="codehilite"><pre>pick 3654a50 Add c.txt
+pick 0341056 Add b.txt
+reword 6883d87 Update c.txt to 333
+pick 36ed38f Add d.txt
+</pre></div>
+
+
+<p>然後存檔退出，接著 Git 會開始重新 <code>pick</code> 這些版本進行套用，但套用到 <code>reword</code> 這個命令時，會重新再開啟一次文字編輯器，讓你可以在此時變更版本訊息文字，這時我們直接改成 <code>Update: c.txt is changed to 333</code> 文字後存檔退出，接著就會直接套用完後續的版本。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382771/c12d1e78-3b32-11e3-964e-c14ae43ab26c.png"></p>
+<p>我們最後再用 <code>git log</code> 查看版本紀錄，發現該版本的訊息確實已經變更為我們修改的那段文字。而且該版本與後續的版本 commit 物件編號也會不一樣，不一樣代表這兩個是新的 commit 物件。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382783/f1c83b30-3b32-11e3-9154-178fd8b2d345.png"></p>
+<h2 id="3-commit">3. 插入一個 commit</h2>
+<p>接著我們再執行一次 <code>git rebase 92f937a190e1fca839eed4f51d7f7199b617e3d4 -i</code> 指令，目前的 Rebase 指令如下：</p>
+<div class="codehilite"><pre>pick 3654a50 Add c.txt
+pick 0341056 Add b.txt
+pick a9eca79 Update: c.txt is changed to 333
+pick 7aacc1b Add d.txt
+</pre></div>
+
+
+<p>如果我們想在 <code>a9eca79</code> 版本之後「插入一個新版本」，只要在  <code>a9eca79</code> 這行前面的 <code>pick</code> 改成 <code>edit</code> 即可讓 Rebase 在重新套用的過程中「暫停」在這個版本，然後讓你可以對這個版本進行「編輯」動作：</p>
+<div class="codehilite"><pre>pick 3654a50 Add c.txt
+pick 0341056 Add b.txt
+edit a9eca79 Update: c.txt is changed to 333
+pick 7aacc1b Add d.txt
+</pre></div>
+
+
+<p>然後存檔退出，接著 Git 會開始執行套用，等執行到 <code>a9eca79</code> 這個版本時，套用的動作會被中斷，並提示你可以執行 <code>git commit --amend</code> 重新執行一次 commit 動作：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382845/c5376040-3b33-11e3-9305-fb2626f452c3.png"></p>
+<p>因為我們的目的是希望在 <code>a9eca79</code> 這個版本之後「插入」一個新版本，所以我們可以直接在這個階段「建立新版本」！</p>
+<p>例如我想新增一個版本是「新增一個 <code>z.txt</code> 檔案」，我可以這麼做：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382885/62a3baea-3b34-11e3-97b0-84abccbae534.png"></p>
+<p>我們執行 <code>git rebase --continue</code> 讓 Rebase 指令繼續完成。最終完成的畫面如下圖示：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382898/8abab358-3b34-11e3-8dc5-191281bbd156.png"></p>
+<p>最後我們用 <code>git log</code> 查看一下，確實我們剛剛建立的 <code>Add z.txt</code> 這個版本已經成功被建立！</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1382902/aa2557b6-3b34-11e3-9804-18b42b8e498e.png"></p>
+<h2 id="4-commit">4. 編輯一個 commit</h2>
+<p>編輯一個 commit 的動作，就如【插入一個 commit】的示範一樣，你只要先把該版本修正為 <code>edit</code> 命令，就可以利用 <code>git commit --amend</code> 重新執行一次 commit 動作，就等同於編輯了某個版本的紀錄。</p>
+<h2 id="5-commit">5. 拆解一個 commit</h2>
+<p>拆解一個 commit 紀錄，代表的是你想要把「某一個 commit 紀錄」變成兩筆紀錄，其實這個動作跟【插入一個 commit】幾乎是完全一樣的。差別僅在於你只要把編輯中的那個版本，將某些檔案從「索引」狀態中移除，然後執行 <code>git commit --amend</code> 就可以建立一個新版。然後再執行 <code>git add .</code> 重新把這些檔案加入，然後再執行 <code>git commit</code>，即可將原本一個版本的變更，變成兩個版本。</p>
+<h2 id="6-commit">6. 壓縮一個 commit，且合併訊息紀錄</h2>
+<p>所謂的「壓縮一個 commit 版本」，代表你這幾個版本中，有個版本訊息有點多餘，而且覺得可以把這個版本的變更合併到「上一個版本」(parent commit)中，那麼你可以修改 Rebase 指令，把 <code>pick</code> 修改為 <code>squash</code> 即可。</p>
+<p>透過壓縮的方式，被套用 <code>squash</code> 命令的版本，其「版本紀錄訊息」會被自動加入到「上一個版本」的訊息中。</p>
+<h2 id="7-commit">7. 壓縮一個 commit，但丟棄版本紀錄</h2>
+<p>如果你只想合併兩個版本的變更，但不需要合併紀錄訊息的話，那麼你可以修改 Rebase 指令，把 <code>pick</code> 修改為 <code>fixup</code> 即可。</p>
+<h2 id="8-commit">8. 刪除一個 commit</h2>
+<p>刪除一個 commit 版本是最簡單的，只要直接把要刪除的這幾行 <code>pick</code> 命令給移除即可。</p>
+<h2 id="_2">今日小結</h2>
+<p>看到這裡，你應該能感受到 Rebase 的強大威力。透過 <code>git rebase</code> 可以有效幫你「重整版本」，不但讓你的 Git 版本記錄更加易懂，也更有邏輯。這樣做的好處，在多人開發的 Git 專案中尤其明顯，為了你的團隊成員著想，各位不得不學啊！</p>
+<p>我重新整理一下本日學到的 Git 指令與參數：</p>
+<ul>
+<li>git rebase -i [commit_id]</li>
+<li>git commit &ndash;amend</li>
+</ul>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

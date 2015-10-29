@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>24 使用 GitHub 遠端儲存庫 - 入門篇.markdown—/Users/Zidane/Documents/Learn-Git-in-30-days/docs</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <h1 id="24-github-">第 24 天：使用 GitHub 遠端儲存庫 - 入門篇</h1>
+<p>GitHub 是目前全世界最多人採用的 Git 線上管理平台，他包含了完整的 Git 遠端儲存庫實作，還有完整的議題追蹤機制與報表，更有成千上萬的開源碼專案都在 GitHub 進行 Git 版本控管。即便在我們公司，也有許多專案採用 GitHub 當成我們主要的 Git 平台。本篇文章主要帶大家上手 GitHub 最基本的使用方式。</p>
+<p>我們先來說明在 GitHub 建立專案的兩種不同的方式。</p>
+<h2 id="github-git">在 GitHub 建立一個「<strong>沒有版本</strong>」的空白 Git 儲存庫</h2>
+<p>先登入 GitHub，再進入 GitHub 首頁： <a href="https://github.com">https://github.com</a></p>
+<p>點選右上角你的使用者名稱進入個人首頁：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1398954/a97150e8-3cad-11e3-9530-d1d0b662d91a.png"></p>
+<p>切換到 <strong>Repositories</strong> 頁籤：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1398964/d4e079e8-3cad-11e3-9efe-323928eb132b.png"></p>
+<p>再點選右邊綠色的 <strong>New</strong> 按鈕，以建立一個你自己的 GitHub 專案 (包含 Git 遠端儲存庫)：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1398972/f1717698-3cad-11e3-93c1-3b8eab6b63c6.png"></p>
+<p>如果你要建立一個「<strong>沒有版本</strong>」的空白 Git 儲存庫，最重要的就是最下方的 <strong>Initialize this repository with a README</strong> 不要勾選，還有 <strong>Add .gitignore</strong> 與 <strong>Add a licenes</strong> 都保留預設的 <strong>None</strong> 選項：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1398983/36b2c6e4-3cae-11e3-931b-c7261294c51d.png"></p>
+<p>最後按下 <strong>Create repository</strong> 即可建立完成，當你建立起一個「<strong>沒有版本</strong>」的空白 Git 儲存庫之後，畫面最下方也提到了幾個讓你上傳本地 Git 儲存庫的指令教學，照著打就可以把本地儲存庫的變更上傳到 GitHub 的遠端儲存庫中。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399023/0e98aed4-3caf-11e3-9e22-e5d0d091d3b0.png"></p>
+<h2 id="github-git_1">在 GitHub 建立一個「<strong>有初始化版本</strong>」的 Git 儲存庫</h2>
+<p>建立一個「<strong>有初始化版本</strong>」的空白 Git 儲存庫，其實就是在 GitHub 建立專案時，勾選了一些初始化的檔案，在建立的過程 GitHub 會依據你所挑選的選項，先幫你建立好一個初始化的 Git 版本：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399056/e86bee3c-3caf-11e3-9dc2-d9f6a46720ef.png"></p>
+<p>建立完成後，在 GitHub 上顯示的內容會不太一樣，因為你已經有一個 commit 版本在上面了：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399066/41f39644-3cb0-11e3-9549-737dddb29566.png"></p>
+<h2 id="_1">將本地儲存庫的變更上傳到遠端儲存庫的方法</h2>
+<p>我有在【第 03 天：建立儲存庫】這篇文章中提到如何取得從 GitHub 建立的遠端儲存庫 (remote repository)，不過若要將本地變更送上 GitHub 則有好幾種不同的方式，其中包括：</p>
+<ol>
+<li>在 GitHub 建立一個「<strong>沒有版本</strong>」的空白 Git 儲存庫，然後透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳</li>
+<li>在 GitHub 建立一個「<strong>沒有版本</strong>」的空白 Git 儲存庫，然後直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案</li>
+<li>在 GitHub 建立一個「<strong>有初始化版本</strong>」的 Git 儲存庫，然後透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳</li>
+<li>在 GitHub 建立一個「<strong>有初始化版本</strong>」的 Git 儲存庫，然後直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案</li>
+</ol>
+<p>以上就是我們首次使用 GitHub 時，最常見的四種上傳方式。嚴格說起來，上述四種上傳方式，應該只有兩種而已，也就是：</p>
+<ol>
+<li>透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳</li>
+<li>直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案</li>
+</ol>
+<p>為什麼我想拆成四個來講呢？主要有兩個原因：</p>
+<ol>
+<li>【透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳】的這種方式，因為「<strong>沒有版本</strong>」的空白 Git 儲存庫，連預設的 <code>master</code> 分支都沒有，所以用預設的指令無法上傳到遠端儲存庫。所以在指令操作上會有兩種用法。</li>
+<li>【直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案】的這種方式，因為通常一個 Git 儲存庫只會有一個「初始 commit 物件」，如果你在本地儲存庫已經建立了幾個版本，代表在你的本地儲存庫中已經有了自己的「初始 commit 物件」，這將會與 GitHub 建立的「<strong>有初始化版本</strong>」的 Git 儲存庫相互衝突，所以上傳的指令也會有些不同。</li>
+</ol>
+<p>以下我們先來說明【<strong>透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳</strong>】這個方法。</p>
+<h2 id="git-clone">透過 <code>git clone</code> 取得遠端儲存庫，再建立版本後上傳</h2>
+<p>這個方法最簡單，因為你還沒有本地儲存庫的存在，甚至連工作目錄都還沒有，所以我們直接利用 <code>git clone</code> 即可把專案下載。然而，在使用 GitHub 的時候，最簡單的方法就是利用 GitHub for Windows 工具。你只要點擊 <strong>Clone in Desktop</strong> 按鈕，即可自動啟動 GitHub for Windows 工具幫你下載 Git 專案：</p>
+<ul>
+<li>
+<p>「<strong>沒有版本</strong>」的空白 Git 儲存庫</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399201/d8d64cee-3cb2-11e3-89f9-3e3b7a5da8fa.png"></p>
+</li>
+<li>
+<p>「<strong>有初始化版本</strong>」的 Git 儲存庫</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399187/9a5acf94-3cb2-11e3-8efe-b7c0bb029a5d.png"></p>
+</li>
+</ul>
+<p>你也可以直接複製 GitHub 提供的 URL 網址，然後利用 <code>git clone</code> 指令下載，例如：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399226/8618a2bc-3cb3-11e3-9af4-95135f7e16c7.png"></p>
+<p>如果你用 <code>git clone https://github.com/doggy8088/sandbox-empty.git</code> 複製一個 「<strong>沒有版本</strong>」的空白 Git 儲存庫，將會得到一個 <strong>warning: You appear to have cloned an empty repository.</strong> 警告訊息，不過這不影響你上傳本地的變更。</p>
+<p>如果你用 <code>git clone https://github.com/doggy8088/sandbox-initialized.git</code> 複製一個 「<strong>有初始化版本</strong>」的 Git 儲存庫，將會直接從 GitHub 下載擁有完整變更歷史的「遠端儲存庫」，所以你會看到有下載物件數量、壓縮、解壓縮等資訊。</p>
+<p>我們以 <code>sandbox-empty</code> 這個專案為例，由於這是一個 「<strong>沒有版本</strong>」的空白 Git 儲存庫，在 GitHub 上的遠端儲存庫是完全空的，連預設的 <code>master</code> 分支都沒有，所以在下達 <code>git push</code> 指令時必須加上 <code>-u</code> 參數，才能成功地把本地儲存庫上傳到 GitHub 上的遠端儲存庫，其指令是 <code>git push -u origin master</code></p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399428/8debd114-3cb6-11e3-8c69-3b0ac69a2ffd.png"></p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399635/82b629f4-3cb9-11e3-984e-2de0a2b0e650.png"></p>
+<p>我們再以 <code>sandbox-initialized</code> 這個專案為例，由於這是一個  「<strong>有初始化版本</strong>」的 Git 儲存庫，在 GitHub 上的遠端儲存庫已經有一個版本，同時也建立好預設的 <code>master</code> 分支，所以在下達 <code>git push</code> 指令時可以不用加上 <code>-u</code> 參數，就成功地把本地儲存庫上傳到 GitHub 上的遠端儲存庫，其指令是 <code>git push origin master</code></p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399497/b3e41966-3cb7-11e3-8488-8d19273c8cfd.png"></p>
+<p>當你第二次建立版本時，直接執行 <code>git push</code> 就會自動上傳成功：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399536/40e0db7e-3cb8-11e3-8975-9f3eda701318.png"></p>
+<p><img alt="2013-10-24 10-27-32" src="https://f.cloud.github.com/assets/88981/1399616/497ff9e4-3cb9-11e3-8871-0a95a7890779.jpg"></p>
+<p>不過，當你執行簡單版本的 <code>git push</code> 會出現一段提示，告訴你要設定 <code>push.default</code> 這個選項，因為這種簡寫的 <code>git push</code> 方法，Git 的預設行為將會在 Git 2.0 之後發生改變，建議你透過設定  <code>push.default</code> 選項的方式明確指定 push 的方法。詳細說明請參見 <code>git help config</code> 的說明文件，搜尋 <code>push.default</code> 即可找到相關說明。我建議各位設定成 <code>simple</code>，以利跟日後的 Git 指令列工具的預設值相同，指令如下：</p>
+<div class="codehilite"><pre>git config --global push.default simple
+</pre></div>
+
+
+<p>設定好之後，下次執行 <code>git push</code> 就不會再出現提示訊息了：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399690/433ae430-3cba-11e3-937b-65e97a6bd7a2.png"></p>
+<p>之後的操作，在我們這兩個練習用的工作目錄都完全一樣。</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399713/83498324-3cba-11e3-8e77-ec734c1a7c1c.png"></p>
+<h2 id="git-github">直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案</h2>
+<p>接下來我們再來說明【<strong>直接將現有的本地 Git 儲存庫上傳到指定的 GitHub 專案</strong>】這個方法。但由於練習用的 GitHub 專案已經被上傳一些物件，所以請各位重新再建立兩個新專案，分別是一個「<strong>沒有版本</strong>」的空白 Git 儲存庫，與另一個「<strong>有初始化版本</strong>」的 Git 儲存庫。</p>
+<p>一個「<strong>沒有版本</strong>」的 Git 儲存庫，專案名稱：<code>sandbox-empty2</code>
+一個「<strong>有初始化版本</strong>」的空白 Git 儲存庫，專案名稱：<code>sandbox-initialized2</code></p>
+<p>接著我們建立兩個本地儲存庫與工作目錄，指令如下：</p>
+<div class="codehilite"><pre>mkdir sandbox-empty2
+cd sandbox-empty2
+
+git init
+
+echo a &gt; a.txt
+git add .
+git commit -m &quot;Initial commit&quot;
+
+cd ..
+mkdir sandbox-initialized2
+cd sandbox-initialized2
+
+git init
+
+echo a &gt; a.txt
+git add .
+git commit -m &quot;Initial commit&quot;
+</pre></div>
+
+
+<p>我們先以 <code>sandbox-empty2</code> 專案為例，由於我們本地儲存庫跟 GitHub 上的遠端儲存庫完全沒有關聯，所以必須告訴 Git 遠端儲存庫在哪。這時我們可以輸入 <code>git remote add origin https://github.com/doggy8088/sandbox-empty2.git</code> 建立一個名為 <code>origin</code> 的參照名稱，並指向 <code>https://github.com/doggy8088/sandbox-empty2.git</code> 位址，也就是我們在 GitHub 上的遠端儲存庫位址。接著就跟我們先前講解的步驟一模一樣，如下圖示：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399913/b33173f6-3cbc-11e3-8c00-d4b8aa6f904a.png"></p>
+<p>接著我們再以 <code>sandbox-initialized2</code> 專案為例，請記得複製到正確的 URL 位址：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399935/f44c6ff8-3cbc-11e3-8f26-138754d32a3c.png"></p>
+<p>然後輸入跟以上相同的指令 (記得改 URL 喔)：<code>git remote add origin https://github.com/doggy8088/sandbox-initialized2.git</code></p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1399985/a46a7e8e-3cbd-11e3-8520-2e1373cda574.png"></p>
+<p>你可以發現，這次的 <code>git push</code> 動作被 GitHub 拒絕了！因為你不能把兩個完全無關的 Git 版本直接上傳到 GitHub 上的遠端儲存庫。</p>
+<p>解決的方法很簡單，只要把遠端儲存庫的 <code>master</code> 分支，成功合併回我本地的分支，即可建立兩個不同版本庫之間的關聯，這樣你就可以把本地的 <code>master</code> 分支推送到 GitHub 上遠端儲存庫的 <code>master</code> 分支了。</p>
+<p>將遠端儲存庫的 <code>master</code> 分支取回，並合併到本地儲存庫的 <code>master</code> 分支，有兩種方法：</p>
+<ol>
+<li>使用 <code>git pull origin master</code> 指令</li>
+<li>使用 <code>git fetch</code> 指令後再執行 <code>git merge origin/master</code> 合併動作 (這個方法會在後續的文章詳述)</li>
+</ol>
+<p>成功執行的過程如下圖示：</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1400029/58742560-3cbe-11e3-8c2f-ed383371a1f4.png"></p>
+<h2 id="_2">今日小結</h2>
+<p>本篇文章完整的介紹如何將本地儲存庫上傳到 GitHub 上的遠端儲存庫，雖然過程有點麻煩，但如果你透過 GitHub for Windows 操作的話，要上傳到 GitHub 只要簡單的按下 <strong>sync</strong> 按鈕，就可以自動上傳了，連帳號密碼都不用輸入，這樣是不是簡單很多。 (<sup>_</sup>)</p>
+<p><img alt="image" src="https://f.cloud.github.com/assets/88981/1400097/7354ea80-3cbf-11e3-9b31-668364330afa.png"></p>
+<p>我重新整理一下本日學到的 Git 指令與參數：</p>
+<ul>
+<li>git push origin master</li>
+<li>git push -u origin master</li>
+<li>git pull origin master</li>
+<li>git config &ndash;global push.default simple</li>
+<li>git push</li>
+<li>git fetch</li>
+<li>git merge origin/master</li>
+</ul>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

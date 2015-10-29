@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>13 暫存工作目錄與索引的變更狀態.markdown—/Users/Zidane/Documents/Learn-Git-in-30-days/docs</title>
+    <style type="text/css">
+    html{font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}body{margin: 0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block}audio,canvas,progress,video{display: inline-block;vertical-align: baseline}audio:not([controls]){display: none;height: 0}[hidden],template{display: none}a{background: transparent}a:active,a:hover{outline: 0}abbr[title]{border-bottom: 1px dotted}b,strong{font-weight: bold}dfn{font-style: italic}h1{font-size: 2em;margin: 0.67em 0}mark{background: #ff0;color: #000}small{font-size: 80%}sub,sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}sup{top: -0.5em}sub{bottom: -0.25em}img{border: 0}svg:not(:root){overflow: hidden}figure{margin: 1em 40px}hr{box-sizing: content-box;height: 0}pre{overflow: auto}code,kbd,pre,samp{font-family: monospace, monospace;font-size: 1em}button,input,optgroup,select,textarea{color: inherit;font: inherit;margin: 0}button{overflow: visible}button,select{text-transform: none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance: button;cursor: pointer}button[disabled],html input[disabled]{cursor: default}button::-moz-focus-inner,input::-moz-focus-inner{border: 0;padding: 0}input{line-height: normal}input[type="checkbox"],input[type="radio"]{box-sizing: border-box;padding: 0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height: auto}input[type="search"]{-webkit-appearance: textfield;box-sizing: content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance: none}fieldset{border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em}legend{border: 0;padding: 0}textarea{overflow: auto}optgroup{font-weight: bold}table{border-collapse: collapse;border-spacing: 0}td,th{padding: 0}*{box-sizing: border-box}input,select,textarea,button{font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"}body{min-width: 1020px;font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";color: #333;background-color: #fff}a{color: #4183c4;text-decoration: none}a:hover,a:active{text-decoration: underline}hr,.rule{height: 0;margin: 15px 0;overflow: hidden;background: transparent;border: 0;border-bottom: 1px solid #ddd}hr:before,.rule:before{display: table;content: ""}hr:after,.rule:after{display: table;clear: both;content: ""}h1,h2,h3,h4,h5,h6{margin-top: 15px;margin-bottom: 15px;line-height: 1.1}h1{font-size: 30px}h2{font-size: 21px}h3{font-size: 16px}h4{font-size: 14px}h5{font-size: 12px}h6{font-size: 11px}small{font-size: 90%}blockquote{margin: 0}.lead{margin-bottom: 30px;font-size: 20px;font-weight: 300;color: #555}.text-muted{color: #999}.text-danger{color: #bd2c00}.text-emphasized{font-weight: bold;color: #333}ul,ol{padding: 0;margin-top: 0;margin-bottom: 0}ol ol,ul ol{list-style-type: lower-roman}ul ul ol,ul ol ol,ol ul ol,ol ol ol{list-style-type: lower-alpha}dd{margin-left: 0}tt,code{font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;font-size: 12px}pre{margin-top: 0;margin-bottom: 0;font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace}#realtime .status{overflow: visible;position: absolute;top: -5px;left: 0;background: url("/public/images/github-status.png");width: 26px;height: 26px;display: block;margin: 0 5px 0 0}#realtime .up{background-position: 0 0}#realtime .problem{background-position: 0 -53px}#realtime .down{background-position: 0 -26px}.container{max-width: 920px;margin: 0 auto 20px auto}#header{background: #FAFAFA;background: -moz-linear-gradient(#FAFAFA, #EAEAEA);background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";border-bottom: 1px solid #CACACA;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4),0 0 10px rgba(0, 0, 0, 0.1)}#markup{padding: 3px}#markup article{padding-top: 30px}.markdown-body{overflow: hidden;font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;font-size: 16px;line-height: 1.6;word-wrap: break-word}.markdown-body>*:first-child{margin-top: 0 !important}.markdown-body>*:last-child{margin-bottom: 0 !important}.markdown-body .absent{color: #c00}.markdown-body .anchor{position: absolute;top: 0;left: 0;display: block;padding-right: 6px;padding-left: 30px;margin-left: -30px}.markdown-body .anchor:focus{outline: none}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{position: relative;margin-top: 1em;margin-bottom: 16px;font-weight: bold;line-height: 1.4}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{display: none;color: #000;vertical-align: middle}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{padding-left: 8px;margin-left: -30px;text-decoration: none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{display: inline-block}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code{font-size: inherit}.markdown-body h1{padding-bottom: 0.3em;font-size: 2.25em;line-height: 1.2;border-bottom: 1px solid #eee}.markdown-body h1 .anchor{line-height: 1}.markdown-body h2{padding-bottom: 0.3em;font-size: 1.75em;line-height: 1.225;border-bottom: 1px solid #eee}.markdown-body h2 .anchor{line-height: 1}.markdown-body h3{font-size: 1.5em;line-height: 1.43}.markdown-body h3 .anchor{line-height: 1.2}.markdown-body h4{font-size: 1.25em}.markdown-body h4 .anchor{line-height: 1.2}.markdown-body h5{font-size: 1em}.markdown-body h5 .anchor{line-height: 1.1}.markdown-body h6{font-size: 1em;color: #777}.markdown-body h6 .anchor{line-height: 1.1}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre{margin-top: 0;margin-bottom: 16px}.markdown-body hr{height: 4px;padding: 0;margin: 16px 0;background-color: #e7e7e7;border: 0 none}.markdown-body ul,.markdown-body ol{padding-left: 2em}.markdown-body ul.no-list,.markdown-body ol.no-list{padding: 0;list-style-type: none}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul{margin-top: 0;margin-bottom: 0}.markdown-body li>p{margin-top: 16px}.markdown-body dl{padding: 0}.markdown-body dl dt{padding: 0;margin-top: 16px;font-size: 1em;font-style: italic;font-weight: bold}.markdown-body dl dd{padding: 0 16px;margin-bottom: 16px}.markdown-body blockquote{padding: 0 15px;color: #777;border-left: 4px solid #ddd}.markdown-body blockquote>:first-child{margin-top: 0}.markdown-body blockquote>:last-child{margin-bottom: 0}.markdown-body table{display: block;width: 100%;overflow: auto;word-break: normal;word-break: keep-all}.markdown-body table th{font-weight: bold}.markdown-body table th,.markdown-body table td{padding: 6px 13px;border: 1px solid #ddd}.markdown-body table tr{background-color: #fff;border-top: 1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color: #f8f8f8}.markdown-body img{max-width: 100%;box-sizing: border-box}.markdown-body span.frame{display: block;overflow: hidden}.markdown-body span.frame>span{display: block;float: left;width: auto;padding: 7px;margin: 13px 0 0;overflow: hidden;border: 1px solid #ddd}.markdown-body span.frame span img{display: block;float: left}.markdown-body span.frame span span{display: block;padding: 5px 0 0;clear: both;color: #333}.markdown-body span.align-center{display: block;overflow: hidden;clear: both}.markdown-body span.align-center>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: center}.markdown-body span.align-center span img{margin: 0 auto;text-align: center}.markdown-body span.align-right{display: block;overflow: hidden;clear: both}.markdown-body span.align-right>span{display: block;margin: 13px 0 0;overflow: hidden;text-align: right}.markdown-body span.align-right span img{margin: 0;text-align: right}.markdown-body span.float-left{display: block;float: left;margin-right: 13px;overflow: hidden}.markdown-body span.float-left span{margin: 13px 0 0}.markdown-body span.float-right{display: block;float: right;margin-left: 13px;overflow: hidden}.markdown-body span.float-right>span{display: block;margin: 13px auto 0;overflow: hidden;text-align: right}.markdown-body code,.markdown-body tt{padding: 0;padding-top: 0.2em;padding-bottom: 0.2em;margin: 0;font-size: 85%;background-color: rgba(0,0,0,0.04);border-radius: 3px}.markdown-body code:before,.markdown-body code:after,.markdown-body tt:before,.markdown-body tt:after{letter-spacing: -0.2em;content: "\00a0"}.markdown-body code br,.markdown-body tt br{display: none}.markdown-body del code{text-decoration: inherit}.markdown-body pre>code{padding: 0;margin: 0;font-size: 100%;word-break: normal;white-space: pre;background: transparent;border: 0}.markdown-body .highlight{margin-bottom: 16px}.markdown-body .highlight pre,.markdown-body pre{padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f7f7f7;border-radius: 3px}.markdown-body .highlight pre{margin-bottom: 0;word-break: normal}.markdown-body pre{word-wrap: normal}.markdown-body pre code,.markdown-body pre tt{display: inline;max-width: initial;padding: 0;margin: 0;overflow: initial;line-height: inherit;word-wrap: normal;background-color: transparent;border: 0}.markdown-body pre code:before,.markdown-body pre code:after,.markdown-body pre tt:before,.markdown-body pre tt:after{content: normal}.markdown-body kbd{display: inline-block;padding: 3px 5px;font-size: 11px;line-height: 10px;color: #555;vertical-align: middle;background-color: #fcfcfc;border: solid 1px #ccc;border-bottom-color: #bbb;border-radius: 3px;box-shadow: inset 0 -1px 0 #bbb}.codehilite{background: #ffffff}.codehilite .c{color: #999988;font-style: italic}.codehilite .err{color: #a61717;background-color: #e3d2d2}.codehilite .k{color: #000000;font-weight: bold}.codehilite .o{color: #000000;font-weight: bold}.codehilite .cm{color: #999988;font-style: italic}.codehilite .cp{color: #999999;font-weight: bold}.codehilite .c1{color: #999988;font-style: italic}.codehilite .cs{color: #999999;font-weight: bold;font-style: italic}.codehilite .gd{color: #000000;background-color: #ffdddd}.codehilite .gd .x{color: #000000;background-color: #ffaaaa}.codehilite .ge{color: #000000;font-style: italic}.codehilite .gr{color: #aa0000}.codehilite .gh{color: #999999}.codehilite .gi{color: #000000;background-color: #ddffdd}.codehilite .gi .x{color: #000000;background-color: #aaffaa}.codehilite .go{color: #888888}.codehilite .gp{color: #555555}.codehilite .gs{font-weight: bold}.codehilite .gu{color: #aaaaaa}.codehilite .gt{color: #aa0000}.codehilite .kc{color: #000000;font-weight: bold}.codehilite .kd{color: #000000;font-weight: bold}.codehilite .kp{color: #000000;font-weight: bold}.codehilite .kr{color: #000000;font-weight: bold}.codehilite .kt{color: #445588;font-weight: bold}.codehilite .m{color: #009999}.codehilite .s{color: #d14}.codehilite .na{color: #008080}.codehilite .nb{color: #0086B3}.codehilite .nc{color: #445588;font-weight: bold}.codehilite .no{color: #008080}.codehilite .ni{color: #800080}.codehilite .ne{color: #990000;font-weight: bold}.codehilite .nf{color: #990000;font-weight: bold}.codehilite .nn{color: #555555}.codehilite .nt{color: #000080}.codehilite .nv{color: #008080}.codehilite .ow{color: #000000;font-weight: bold}.codehilite .w{color: #bbbbbb}.codehilite .mf{color: #009999}.codehilite .mh{color: #009999}.codehilite .mi{color: #009999}.codehilite .mo{color: #009999}.codehilite .sb{color: #d14}.codehilite .sc{color: #d14}.codehilite .sd{color: #d14}.codehilite .s2{color: #d14}.codehilite .se{color: #d14}.codehilite .sh{color: #d14}.codehilite .si{color: #d14}.codehilite .sx{color: #d14}.codehilite .sr{color: #009926}.codehilite .s1{color: #d14}.codehilite .ss{color: #990073}.codehilite .bp{color: #999999}.codehilite .vc{color: #008080}.codehilite .vg{color: #008080}.codehilite .vi{color: #008080}.codehilite .il{color: #009999}
+    </style>
+    <style type="text/css">
+      .markdown-body hr{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="markup">
+        <article id="content" class="markdown-body">
+          <h1 id="13">第 13 天：暫存工作目錄與索引的變更狀態</h1>
+<p>有沒有遇過這種情境，某個系統開發寫到一半，結果被老闆或客戶「插單」，被要求緊急修正一個現有系統的 Bug 或添加一個功能，眼前的程式即將完成，老闆的「急件」又不能拖，一個未完成的軟體開發狀態外加緊急調整的需求，這簡直是軟體品質的一大考驗。如果你有這種困擾，那麼 Git 可以漂亮的幫你完成任務。</p>
+<h2 id="git-stash">認識 git stash 指令</h2>
+<p>我們知道使用 Git 版控的時候，有區分「工作目錄」與「索引」。工作目錄裡面會有你改到一半還沒改完的檔案(尚未加入索引)，也有新增檔案但還沒加入的檔案(尚未加入索引)。而放在索引的資料，則是你打算透過 <code>git commit</code> 建立版本 (建立 commit 物件) 的內容。</p>
+<p>當你功能開發到一半，被緊急插單一定手忙腳亂，尤其是手邊正改寫到一半的那些程式碼不知該如何是好。在 Git 裡有個 <code>git stash</code> 指令，可以自動幫你把改寫到一半的那些檔案建立一個「特殊的版本」(也是一個 commit 物件)，我們稱這些版本為 stash 版本，或你可以直接稱他為「暫存版」。</p>
+<h2 id="_1">建立暫存版本</h2>
+<p>我們手邊改到一半的檔案，可能會有以下狀態：</p>
+<ul>
+<li>新增檔案 (尚未列入追蹤的檔案) (untracked files)</li>
+<li>新增檔案 (已經加入索引的檔案) (tracked/staged files)</li>
+<li>修改檔案 (尚未加入索引的檔案) (tracked/unstaged files)</li>
+<li>修改檔案 (已經加入索引的檔案) (tracked/staged files)</li>
+<li>刪除檔案 (尚未加入索引的檔案) (tracked/unstaged files)</li>
+<li>刪除檔案 (已經加入索引的檔案) (tracked/staged files)</li>
+</ul>
+<p>若要將這些開發到一半的檔案建立一個「暫存版」，你有兩個選擇：</p>
+<ul>
+<li><code>git stash</code> 會將所有已列入追蹤(tracked)的檔案建立暫存版</li>
+<li><code>git stash -u</code>　會包括所有已追蹤或未追蹤的檔案，全部都建立成暫存版</li>
+</ul>
+<p><strong>註</strong>: <code>git stash</code> 也可以寫成 <code>git stash save</code>，兩個指令的結果是一樣的，只是 <code>save</code> 參數可以忽略不打而已。</p>
+<p>我們來看看一個簡單的例子。我們先透過以下指令快速建立一個擁有兩個版本的 Git 儲存庫與工作目錄：</p>
+<div class="codehilite"><pre>mkdir git-stash-demo
+cd git-stash-demo
+git init
+
+echo. &gt; a.txt
+git add .
+git commit -m &quot;Initial commit&quot;
+
+echo 1 &gt; a.txt
+git add .
+git commit -m &quot;a.txt: set 1 as content&quot;
+</pre></div>
+
+
+<p>目前的「工作目錄」是乾淨的，沒有任何更新到一半的檔案：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git log
+commit 95eff6b19a9494667985ed5da37427bb08b8cdd7
+Author: Will &lt;doggy.huang@gmail.com&gt;
+Date:   Fri Oct 11 08:17:15 2013 +0800
+
+    a.txt: set 1 as content
+
+commit 346fadefdd6ed2c562201b5ca37d1e4d26b26d54
+Author: Will &lt;doggy.huang@gmail.com&gt;
+Date:   Fri Oct 11 08:17:14 2013 +0800
+
+    Initial commit
+
+C:\git-stash-demo&gt;git status
+# On branch master
+nothing to commit, working directory clean
+
+C:\git-stash-demo&gt;dir
+ 磁碟區 C 中的磁碟是 System
+ 磁碟區序號:  361C-6BD6
+
+ C:\git-stash-demo 的目錄
+
+2013/10/11  上午 08:17    &lt;DIR&gt;          .
+2013/10/11  上午 08:17    &lt;DIR&gt;          ..
+2013/10/11  上午 08:17                 4 a.txt
+               1 個檔案               4 位元組
+               2 個目錄   9,800,470,528 位元組可用
+</pre></div>
+
+
+<p>接著我新增一個 b.txt，再將 a.txt 的內容改成 2，如下：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;type a.txt
+1
+
+C:\git-stash-demo&gt;echo 2 &gt; a.txt
+
+C:\git-stash-demo&gt;type a.txt
+2
+
+C:\git-stash-demo&gt;echo TEST &gt; b.txt
+
+C:\git-stash-demo&gt;dir
+ 磁碟區 C 中的磁碟是 System
+ 磁碟區序號:  361C-6BD6
+
+ C:\git-stash-demo 的目錄
+
+2013/10/11  上午 08:55    &lt;DIR&gt;          .
+2013/10/11  上午 08:55    &lt;DIR&gt;          ..
+2013/10/11  上午 08:54                 4 a.txt
+2013/10/11  上午 08:55                 7 b.txt
+               2 個檔案              11 位元組
+               2 個目錄   9,704,288,256 位元組可用
+
+C:\git-stash-demo&gt;git status
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   a.txt
+#
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#       b.txt
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+
+
+<p>現在我們用 <code>git status</code> 得出我們有兩個檔案有變更，一個是 a.txt 處於 &ldquo;not staged&rdquo; 狀態，而 b.txt 則是 &ldquo;untracked&rdquo; 狀態。</p>
+<p>這時，我們利用 <code>git stash -u</code> 即可將目前這些變更全部儲存起來 (包含 untracked 檔案)，儲存完畢後，這些變更全部都會被重置，新增的檔案會被刪除、修改的檔案會被還原、刪除的檔案會被加回去，讓我們目前在工作目錄中所做的變更全部回復到 HEAD 狀態。這就是 Stash 幫我們做的事。如下所示：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash -u
+Saved working directory and index state WIP on master: 95eff6b a.txt: set 1 as c
+ontent
+HEAD is now at 95eff6b a.txt: set 1 as content
+
+C:\git-stash-demo&gt;git status
+# On branch master
+nothing to commit, working directory clean
+</pre></div>
+
+
+<p>在建立完成｢暫存版｣之後，Git 會順便幫我們建立一個暫存版的「參考名稱」，而且是「一般參考」，在 <code>.git\refs\stash</code> 儲存的是一個 commit 物件的「絕對名稱」：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;dir .git\refs\
+ 磁碟區 C 中的磁碟是 System
+ 磁碟區序號:  361C-6BD6
+
+ C:\git-stash-demo\.git\refs 的目錄
+
+2013/10/11  上午 08:57    &lt;DIR&gt;          .
+2013/10/11  上午 08:57    &lt;DIR&gt;          ..
+2013/10/11  上午 08:57    &lt;DIR&gt;          heads
+2013/10/11  上午 08:57                41 stash
+2013/10/11  上午 08:17    &lt;DIR&gt;          tags
+               1 個檔案              41 位元組
+               4 個目錄   9,701,650,432 位元組可用
+</pre></div>
+
+
+<p>我們用 <code>git cat-file -p stash</code> 即可查出該物件的內容，這時你就可以發現這其實就是一個有三個 parent (上層 commit 物件) 的 commit 物件：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git cat-file -p stash
+tree 86cf41ab650d8d0ce5fdd003bb7b722a917438a2
+parent 95eff6b19a9494667985ed5da37427bb08b8cdd7
+parent b79c4650e72ad4627d691a2d6cfb192626e24e94
+parent 9b4e4a100776783dc76d16c3872235e6314d15e3
+author Will &lt;doggy.huang@gmail.com&gt; 1381453062 +0800
+committer Will &lt;doggy.huang@gmail.com&gt; 1381453062 +0800
+
+WIP on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>有三個 parent commit 物件的意義就在於，這個特殊的暫存版是從另外三個版本合併進來的，然而這三個版本的內容，我們一樣可以透過相同的指令顯示其內容：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git cat-file -p 95ef
+tree eba2ef4205738a5015fc47d9cfe634d7d5eae466
+parent 346fadefdd6ed2c562201b5ca37d1e4d26b26d54
+author Will &lt;doggy.huang@gmail.com&gt; 1381450635 +0800
+committer Will &lt;doggy.huang@gmail.com&gt; 1381450635 +0800
+
+a.txt: set 1 as content
+
+C:\git-stash-demo&gt;git cat-file -p b79c
+tree eba2ef4205738a5015fc47d9cfe634d7d5eae466
+parent 95eff6b19a9494667985ed5da37427bb08b8cdd7
+author Will &lt;doggy.huang@gmail.com&gt; 1381453061 +0800
+committer Will &lt;doggy.huang@gmail.com&gt; 1381453061 +0800
+
+index on master: 95eff6b a.txt: set 1 as content
+
+C:\git-stash-demo&gt;git cat-file -p 9b4e
+tree b583bfe854b66756dd0f8ee96cab0c898193b5fd
+author Will &lt;doggy.huang@gmail.com&gt; 1381453062 +0800
+committer Will &lt;doggy.huang@gmail.com&gt; 1381453062 +0800
+
+untracked files on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>從上述執行結果你應該可以從「訊息紀錄」的地方清楚看出這三個版本分別代表那些內容：</p>
+<ol>
+<li>原本工作目錄的 HEAD 版本</li>
+<li>原本工作目錄所包含的索引內容</li>
+<li>原本工作目錄裡所有未追蹤的內容</li>
+</ol>
+<p>也就是說，他把「原本工作目錄的 HEAD 版本」先建立兩個暫時的分支，這兩個分支分別就是「原本工作目錄所包含的索引內容」與「原本工作目錄裡所有未追蹤的內容」之用，並在個別分支建立了一個版本以產生 commit 物件並且給予預設的 log 內容。最後把這三個分支，合併到一個「參照名稱」為 <code>stash</code> 的版本　（這也是個 commit 物件)。還不僅如此，他還把整個「工作目錄」強迫重置為 HEAD 版本，把這些變更與新增的檔案都給還原，多的檔案也會被移除。</p>
+<h2 id="_2">取回暫存版本</h2>
+<p>由於「工作目錄」已經被重置，所以變更都儲存到 <code>stash</code> 這裡，哪天如果你想要把這個暫存檔案取回，就可以透過 <code>git stash pop</code> 重新「合併」回來。如下所示：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git status
+# On branch master
+nothing to commit, working directory clean
+
+C:\git-stash-demo&gt;git stash pop
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   a.txt
+#
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#       b.txt
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+Dropped refs/stash@{0} (0e5b72c96fcf693e0402c40cd58f980bb3ff7efd)
+</pre></div>
+
+
+<p>執行完畢後，所有當初的工作目錄狀態與索引狀態都會被還原。事實上 Git 骨子裡是透過「合併」的功能把這個名為 <code>stash</code> 的版本給合併回目前分支而已。最後，它還會自動將這個 <code>stash</code> 分支給刪除，所以稱它為【暫存版】非常貼切！</p>
+<h2 id="_3">建立多重暫存版</h2>
+<p>Git 的 stash 暫存版可以不只一份，你也可以建立多份暫存檔，以供後續使用。不過，在正常的開發情境下，通常不會有太多暫存版才對，會有這種情況發生，主要有兩種可能：</p>
+<ol>
+<li>你的開發習慣太差，導致累積一堆可能用不到的暫存版。</li>
+<li>你老闆或客戶「插單」的問題十分嚴重，經常改到一版就被迫插單。(這就是身為 IT 人的 BI 啊<sub></sub>~XD) (BI = Business Intelligence 或另一層意思&hellip; Well, you know....) </li>
+</ol>
+<p>我們延續上一個例子，目前工作目錄的狀態應該是有兩個檔案有變化，我們用 <code>git status -s</code> 取得工作目錄的狀態(其中 <code>-s</code> 代表顯示精簡版的狀態)：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git status -s
+ M a.txt
+?? b.txt
+</pre></div>
+
+
+<p>現在，我們先建立第一個 stash 暫存版：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash save -u
+Saved working directory and index state WIP on master: 95eff6b a.txt: set 1 as content
+HEAD is now at 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>然後透過 <code>git stash list</code> 列出目前所有的 stash 清單，目前僅一份暫存版：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash list
+stash@{0}: WIP on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>而且你可以看到建立暫存版之後，工作目錄是乾淨的。此時我們在建立另一個 <code>new.txt</code> 檔案，並且再次建立暫存版：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git status -s
+
+C:\git-stash-demo&gt;echo 1 &gt; new.txt
+
+C:\git-stash-demo&gt;git status -s
+?? new.txt
+
+C:\git-stash-demo&gt;git stash save -u
+Saved working directory and index state WIP on master: 95eff6b a.txt: set 1 as c
+ontent
+HEAD is now at 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>我們在再一次 <code>git stash list</code> 就可以看到目前有兩個版本：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash list
+stash@{0}: WIP on master: 95eff6b a.txt: set 1 as content
+stash@{1}: WIP on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>你應該會很納悶，都沒有自訂的註解，過了幾天不就忘記這兩個暫存檔各自的修改項目嗎？沒錯，所以你可以自訂「暫存版」的紀錄訊息。我們透過 <code>git stash save -u &lt;message&gt;</code> 指令，就可自訂暫存版的註解：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash -h
+usage: git core\git-stash list [&lt;options&gt;]
+   or: git core\git-stash show [&lt;stash&gt;]
+   or: git core\git-stash drop [-q|--quiet] [&lt;stash&gt;]
+   or: git core\git-stash ( pop | apply ) [--index] [-q|--quiet] [&lt;stash&gt;]
+   or: git core\git-stash branch &lt;branchname&gt; [&lt;stash&gt;]
+   or: git core\git-stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+                       [-u|--include-untracked] [-a|--all] [&lt;message&gt;]]
+   or: git core\git-stash clear
+
+C:\git-stash-demo&gt;git stash pop
+Already up-to-date!
+# On branch master
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#       new.txt
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+Dropped refs/stash@{0} (5800f37937aea5fb6a1aba0d5a1598a940e70c96)
+
+C:\git-stash-demo&gt;git stash save -u &quot;新增 new.txt 檔案&quot;
+Saved working directory and index state On master: 新增 new.txt 檔案
+HEAD is now at 95eff6b a.txt: set 1 as content
+
+C:\git-stash-demo&gt;git stash list
+stash@{0}: On master: 新增 new.txt 檔案
+stash@{1}: WIP on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>這時，如果你直接執行 <code>git stash pop</code> 的話，他會取回最近的一筆暫存版，也就是上述例子的 <code>stash@{0}</code> 這一項，並且把這一筆刪除。另一種取回暫存版的方法是透過 <code>git stash apply</code> 指令，唯一差別則是取回該版本 (其實是執行合併動作) 後，該暫存版還會留在 stash 清單上。</p>
+<p>如果你想取回「特定一個暫存版」，你就必須在最後指名 stash id，例如 <code>stash@{1}</code> 這樣的格式。例如如下範例，我使用 <code>git stash apply "stash@{1}"</code> 取回前一個暫存版，但保留這版在 stash 清單裡：</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash list
+stash@{0}: On master: 新增 new.txt 檔案
+stash@{1}: WIP on master: 95eff6b a.txt: set 1 as content
+
+C:\git-stash-demo&gt;git stash apply &quot;stash@{1}&quot;
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   a.txt
+#
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#       b.txt
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+C:\git-stash-demo&gt;git stash list
+stash@{0}: On master: 新增 new.txt 檔案
+stash@{1}: WIP on master: 95eff6b a.txt: set 1 as content
+</pre></div>
+
+
+<p>如果確定合併正確，你想刪除 <code>stash@{1}</code> 的話，可以透過 <code>git stash drop "stash@{1}"</code> 將特定暫存版刪除。</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash drop &quot;stash@{1}&quot;
+Dropped stash@{1} (118cb8a7c0b763c1343599027d79f7b20df57ebf)
+
+C:\git-stash-demo&gt;git stash list
+stash@{0}: On master: 新增 new.txt 檔案
+</pre></div>
+
+
+<p>如果想清理掉所有的暫存版，直接下達 <code>git stash clear</code> 即可全部刪除。</p>
+<div class="codehilite"><pre>C:\git-stash-demo&gt;git stash list
+stash@{0}: On master: 新增 new.txt 檔案
+
+C:\git-stash-demo&gt;git stash clear
+
+C:\git-stash-demo&gt;git stash list
+</pre></div>
+
+
+<h2 id="_4">今日小結</h2>
+<p>Git 的 stash (暫存版) 機制非常非常的實用，尤其是在 IT 業界插單嚴重的工作環境下 (不只台灣這樣，世界各地的 IT 業界應該也差不多)，這功能完全為我們量身打造，非常的貼心。在 Subversion 裡就沒有像 Git 這麼簡單，一個指令就可以把工作目錄與索引的狀態全部存起來。</p>
+<p>本篇文章也試圖透過指令了解 stash 的核心機制，其實就是簡單的「分支」與「合併」而已，由此可知，整套 Git 版本控管機制，大多是以「分支」與「合併」的架構在運作。</p>
+<p>我重新整理一下本日學到的 Git 指令與參數：</p>
+<ul>
+<li>git stash</li>
+<li>git stash -u</li>
+<li>git stash save</li>
+<li>git stash save -u </li>
+<li>git stash list</li>
+<li>git stash pop</li>
+<li>git stash apply</li>
+<li>git stash pop &ldquo;stash@{id}&rdquo;</li>
+<li>git stash apply &ldquo;stash@{id}&rdquo;</li>
+<li>git stash drop &ldquo;stash@{id}&rdquo;</li>
+<li>git stash clear</li>
+</ul>
+<h2 id="_5">參考連結</h2>
+<ul>
+<li><a href="http://gitref.org/basic/#diff">BASIC SNAPSHOTTING</a></li>
+</ul>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
